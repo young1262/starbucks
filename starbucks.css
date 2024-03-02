@@ -1,0 +1,245 @@
+@charset "utf-8";
+*{
+    font-family: 'Noto Sans KR', sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+ol,ul,li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* img태그의 경우 부모박스 기준으로 항상 이미지가 100% 지정되어있게끔 설정 */
+
+/* 메뉴 헤더 영역 */
+header{
+    overflow: hidden;
+    /* 부모에게 overflow: hidden; 적용시 float 적용받은 객체의 상실한 높이값을 돌려줌 */}
+nav{  
+    height: 120px;
+    background-image: url(./Starbucks_img/header.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner{
+    /* 높이 646px img는 main-banner.jpg */
+    /* height: 646px; */
+    background-image: url(./Starbucks_img/main-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding-bottom: 34.01%;
+
+    /* 이미지 비율값 구해서 적용해보기 */
+    /* (이미지의 크기값) 작은값에서 큰값을 나누기 *100 */
+    /* (653/1920) *100 = 34.01% */
+    /* 소수점 셋째자리까지 입력가능 */
+}
+
+.bottom{
+    width: 50%;
+    height: 62px;
+}
+.bottomL{
+    background: url(./Starbucks_img/information.png) no-repeat center;
+    background-size: cover;
+    float: left;
+}
+.bottomR{
+    background: url(./Starbucks_img/promotion.png) no-repeat center;
+    background-size: cover;
+    float: left;
+    /* float 속성 적용시 너비값이 브라우저 전체를 채울때는 객체가 오른쪽에 정렬되어있던 왼쪽에 정렬되어있던 상관없음 */
+}
+
+/* 메인섹션영역 */
+.box1{
+    height: 240px;
+    background: url(./Starbucks_img/reward.png) no-repeat center;
+    background-size: cover;
+}
+
+.box2{
+    /* 높이값 572px / 배경이미지 chris_bg.jpg / position 기준값 걸어주기 */
+    height: 572px;
+    background: url(./Starbucks_img/chris_bg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.box2 .leaf{
+    width: 235px;
+    height: 234px;
+    position: absolute;
+    bottom: 0;
+}
+
+.box2 .leaf.left{
+    left: 0;
+}
+
+.box2 .leaf.right{
+    right: 0;
+}
+
+.box2 .bean{
+    width: 483px;
+    height: 399px;
+    background: url(./Starbucks_img/bean_01.png) no-repeat;
+    background-size: cover;
+    position: absolute;
+    left: 30%;
+    top: 50%;
+    /* margin-top: -199.5px; */
+    transform: translateY(-50%);
+    /* position: absolute; 지정후 상단에서 50%(절반)만큼 내렸다가 객체의 높이값에서 절반값만큼 다시 올려줘야 수직중앙정렬가능 */
+}
+
+.box2 .txt-box{
+    position: absolute;
+    right: 25%;
+    /* 수직 중앙정렬해주기 */
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.box2 .txt-box span{
+    color: rgba(255, 255, 255, 0.8);
+    /* 폰트사이즈를 유동값으로 변경 */
+    /* 지정해줘야하는 폰트사이즈 / 브라우저 기본 폰트 사이즈(16px) = 유종적인 폰트 사이즈값(rem) */
+    font-size: 1.25rem;
+    /* 고정값(px)으로 사용시 유지보수가 어렵기때문에 유동값을 주로 사용 */
+    font-weight: 500;
+}
+
+.box2 .txt-box h1{
+    /* 폰트사이즈 33.6px -> 유동값으로 설정 */
+    /* 폰트 컬러 #fff */
+    /* 폰트 굵기 700 */
+    font-size: 2.1rem;    
+    color:#fff;
+    font-weight: 700;
+}
+
+.box2 .txt-box p{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    font-weight: 100;
+    line-height: 1.3;
+    margin-top: 12px;
+    /* 자간 조절해주는 속성 */
+    letter-spacing: -0.5px;
+}
+
+.txt-box a{
+    display: block;
+    width: 125px;
+    height: 38px;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 40px;
+    color: #fff;
+    font-size: 0.937rem;
+    font-weight: 600;
+    /* 텍스트를 박스 기준 가운데 정렬시켜보기 */
+    text-align: center;
+    line-height: 38px;
+}
+
+.box3{
+    background: url(./Starbucks_img/스타벅스_3.jpg) no-repeat center;
+    background-size: cover;
+    /* 비율값 지정해서 이미지 출력되게끔 지정해보기 */
+    padding-bottom: 21.019%;
+}
+
+.box4{
+    height: 750px;
+    background: url(./Starbucks_img/스타벅스_4.jpeg) no-repeat right bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.box4 .txt-box{
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: right;
+}
+/* float 속성 사용해서 오른쪽 정렬하고 배치시켜보기 */
+.box4 .head-txt{
+    width: 300px;
+    height: 273px;
+    float: right;
+}
+/* .box4 헤드텍스트 이미지만 비율에 맞게 전부 출력되도록 설정 */
+.box4 .head-txt img{
+    object-fit: contain;
+
+}
+
+.box4 .txt-box .main-txt{
+    /* float 속성 이어받아서 위쪽으로 올라간 텍스트를 돌려주기 */
+    clear: both;
+
+    color: #fff;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+    
+
+.box4 .txt-box .con-txt{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.box4 .txt-box a{
+    float: right;
+}
+
+.box .card{
+    width: 944px;
+    height: 608px;
+    position: absolute;
+    right: 8%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* box5부터 푸터까지 순서대로 스타벅스_5,스타벅스_6,스타벅스_푸터 이미지 넣어주고 높이값 400px, 400px, 600px으로 진행해보기(백그라운드 포지션은 설정하지 않음) */
+.box5{
+    background: url(./Starbucks_img/스타벅스_5.png) no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+.box6{
+    background: url(./Starbucks_img/스타벅스_6.png) no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
+footer{
+    background: url(./Starbucks_img/스타벅스_푸터.png) no-repeat;
+    background-size: cover;
+    height: 600;
+}
